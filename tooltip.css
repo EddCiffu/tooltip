@@ -1,0 +1,64 @@
+/*ejemplo para centrar todo*/
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+
+}
+.btn-modern{
+    position: relative;
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: darkgreen;
+    color: whitesmoke;
+    border-bottom: 2px solid rgb(4, 68, 4);
+    cursor: pointer;
+}
+.btn-modern:hover {
+    transition: 0.4s;
+    transform: translateY(-5px);
+background-color: rgb(131, 35, 11);
+border-bottom: 2px solid rgb(78, 15, 15);
+color: goldenrod;
+}
+
+/*.tooltip:hover::before {
+    content: "esto es un tooltip";
+}*/
+
+.tooltip {
+    position: absolute;
+    color: rgb(179, 171, 171);
+    background-color: rgb(63, 61, 61);
+    padding: 5px 10px;
+    border-radius: 5px;
+    top: -50px;
+    left: -100%;
+    transform: translateX(25%);
+    /*visibility: hidden;*/
+    opacity: 0;
+}
+
+.btn-modern:hover .tooltip {
+    /*visibility: visible;*/
+    opacity: 0.5;
+}
+.tooltip::before {
+    content: '';
+    border: solid 10px transparent;
+    border-top-color: #333;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+/*.tutorial {
+    border: solid 10px #333 transparent;
+    border-top-color: #333 ;
+}*/
